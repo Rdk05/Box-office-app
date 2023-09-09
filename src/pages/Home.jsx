@@ -10,33 +10,20 @@ const Home = () => {
 
     const { data: apiData, error: apiDataError } = useQuery({
         queryKey: ['search', filter],
-        queryFn: () => filter.searchOption === 'shows' ? searchForShows(filter.q) : searchForPeople(filter.q),
+        queryFn: () => 
+        filter.searchOption === 'shows'
+         ? searchForShows(filter.q)
+         : searchForPeople(filter.q),
         enabled: !!filter,
+        refetchOnWindowFocus: false,
     });
   
 //   const [apiData, setApiData] = useState(null);
 //   const [apiDataError, setApiDataError] = useState(null);
 
   const onSearch = async ({ q, searchOption}) => {
+    setFilter({ q, searchOption });
 
-    setFilter({ q, searchOption })
-
-    // try {
-    //   setApiDataError(null);
-
-    //   let result;
-
-    //   if(searchOption === 'shows'){
-    //       result = await searchForShows(q);
-    //   }
-    //   else{
-    //       result = await searchForPeople(q);
-    //     }
-        
-    //  setApiData(result);
-    // } catch (error) {
-    //   setApiDataError(error);
-    // }
   };
 
   const renderApiData = () => {
