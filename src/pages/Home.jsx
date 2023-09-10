@@ -5,6 +5,7 @@ import SearchForm from '../components/SearchForm';
 import ShowGrid from '../components/shows/ShowGrid';
 import ActorGrid from '../components/actors/ActorGrid';
 
+
 const Home = () => {
     const [filter, setFilter] = useState(null);
 
