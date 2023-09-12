@@ -4,6 +4,43 @@ import { searchForShows, searchForPeople } from '../api/tvmaze';
 import SearchForm from '../components/SearchForm';
 import ShowGrid from '../components/shows/ShowGrid';
 import ActorGrid from '../components/actors/ActorGrid';
+import styled, { css, ThemeProvider } from 'styled-components';
+
+const theme = {
+  colors: {
+    main: 'red',
+  },
+};
+
+const Container = styled.div`
+  text-align: center;
+`
+
+
+const Button = styled.button`
+ background: transparent;
+  border-radius: 3px;
+  border: 2px solid palevioletred;
+  color: ${props => props.theme.colors.main};
+  margin: 0 1em;
+  padding: 0.25em 1em;
+
+  ${props =>
+    props.primary &&
+    css`
+      background: palevioletred;
+      color: white;
+    `};
+
+    ${props =>
+    props.fontSize &&
+    css`
+      font-size: $[props.fontSize]px;
+    `};
+
+
+    
+`;
 
 
 const Home = () => {
@@ -50,6 +87,13 @@ const Home = () => {
 
   return (
     <div>
+    <ThemeProvider theme={theme}>
+    <Container>
+    <Button type='button' primary >hello</Button>
+    <Button type='button' $fontSize={20}>hello</Button>
+    </Container>
+
+    </ThemeProvider>
     <SearchForm onSearch={onSearch} />
 
       <div>{renderApiData()}</div>
