@@ -7,6 +7,7 @@ export const FlexGrid = styled.div`
 
   animation: fadein 0.3s ease-in forwards;
 
+
   @keyframes fadein {
     from {
       opacity: 0;
