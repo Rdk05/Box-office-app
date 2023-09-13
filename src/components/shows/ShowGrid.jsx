@@ -2,7 +2,7 @@
 import ShowCard from "./ShowCard";
 import {useStarredShows} from "../../lib/useStarredShows";
 import { FlexGrid } from "../common/FlexGrid";
-import NotFoundImgSrc from '../../lib/not-found-image.png';
+import NotFoundImgSrc from '../../lib/Not-found-image.png';
 
 const ShowGrid = ({ shows }) => {
    const [starredShows,dispatchStarred] = useStarredShows()

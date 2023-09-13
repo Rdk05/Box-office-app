@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { StarIcon } from '../common/StarIcon';
-import NotFoundImgSrc from '../../lib/not-found-image.png';
+import NotFoundImgSrc from '../../lib/Not-found-image.png';
 
 const ShowMainData = ({ image, name, rating, summary, genres }) => {
   return (

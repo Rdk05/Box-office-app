@@ -1,6 +1,6 @@
 import { FlexGrid } from "../common/FlexGrid";
 import ActorCard from "./ActorCard";
-import NotFoundImgSrc from '../../lib/not-found-image.png';
+import NotFoundImgSrc from '../../lib/Not-found-image.png';
 
 const ActorGrid = ({ actors }) => {
     return (
