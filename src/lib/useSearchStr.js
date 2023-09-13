@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const usePersistedState = (initialState, sessionStorageKey) => {
     const [state, setState] = useState(() => {
